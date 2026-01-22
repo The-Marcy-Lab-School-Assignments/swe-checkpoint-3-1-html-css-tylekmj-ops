@@ -18,15 +18,16 @@ img {
 
 /* Add your styles below */
 
-
-
 /* Universal css */
 
 body {
   background-color: black;
 }
 
-li, p, a, h1 {
+li,
+p,
+a,
+h1 {
   color: white;
   font-family: Arial, sans-serif;
 }
@@ -61,8 +62,6 @@ a:hover {
   text-decoration-line: underline;
 }
 
-
-
 /* profile section */
 
 #profile {
@@ -71,7 +70,6 @@ a:hover {
   padding-bottom: 2rem;
 }
 
-
 #profile figure {
   display: flex;
   justify-content: center;
@@ -79,12 +77,14 @@ a:hover {
   margin-top: 2rem;
 }
 
-#profile img{
+#profile img {
   max-width: 300px;
   border-radius: 100%;
 }
 
-#profile p, #profile h1, #profile ul{
+#profile p,
+#profile h1,
+#profile ul {
   display: flex;
   justify-content: flex-start;
   margin-left: 20%;
@@ -104,4 +104,28 @@ a:hover {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
